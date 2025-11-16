@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate - AK INSTITUTE PVT LTD</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>AK INSTITUTE PVT LTD</span>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="verify.html" class="nav-link">Verify Certificate</a>
+                    <a href="admin.html" class="nav-link">Admin</a>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="certificate-container">
+        <div class="container">
+            <div id="certificateNotFound" class="error-message" style="display: none;">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h2>Certificate Not Found</h2>
+                <p>The requested certificate could not be found. Please check the URL and try again.</p>
+                <a href="verify.html" class="btn btn-primary">Verify Certificate</a>
+            </div>
+
+            <div id="certificateContent" style="display: none;">
+                <div class="certificate-actions">
+                    <button id="printBtn" class="btn btn-secondary">
+                        <i class="fas fa-print"></i> Print Certificate
+                    </button>
+                </div>
+
+                <div class="certificate-wrapper" id="certificatePrint">
+                    <div class="certificate">
+                        <div class="certificate-border">
+                            <div class="certificate-header">
+                                <div class="cert-logo">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h1>AK INSTITUTE PVT LTD</h1>
+                                <p class="cert-subtitle">Professional Training & Certification</p>
+                            </div>
+
+                            <div class="certificate-body">
+                                <h2 class="cert-title">Certificate of Completion</h2>
+                                <p class="cert-text">This is to certify that</p>
+                                <h3 class="cert-student-name" id="certStudentName"></h3>
+                                <p class="cert-text">has successfully completed the course</p>
+                                <h4 class="cert-course-name" id="certCourseName"></h4>
+                                
+                                <div class="cert-details">
+                                    <div class="cert-detail-item">
+                                        <span class="cert-label">Certificate ID:</span>
+                                        <span class="cert-value" id="certId"></span>
+                                    </div>
+                                    <div class="cert-detail-item">
+                                        <span class="cert-label">Issue Date:</span>
+                                        <span class="cert-value" id="certDate"></span>
+                                    </div>
+                                </div>
+
+                                <div class="cert-qr-section">
+                                    <div class="cert-qr-container">
+                                        <div id="qrcode"></div>
+                                        <p class="qr-label">Scan to Verify</p>
+                                    </div>
+                                </div>
+
+                                <div class="cert-signature">
+                                    <div class="signature-line">
+                                        <div class="signature-box">
+                                            <div class="signature-text">Authorized Signature</div>
+                                            <p>Director</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="certificate-footer">
+                                <p>This certificate is awarded in recognition of successful completion of the above-mentioned course.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 AK INSTITUTE PVT LTD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
